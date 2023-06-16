@@ -1,0 +1,12 @@
+server:
+  port : 9090
+security:
+  oauth2:
+    resourceserver:
+      jwk:
+        jwk-set-uri: https://webserver-lctseuk-prd.lfr.cloud/o/oauth2/jwks
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "health"

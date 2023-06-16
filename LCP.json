@@ -1,0 +1,40 @@
+{
+    "kind": "Deployment",
+    "id": "microservice",
+    "deploy": true,
+    "memory": 512,
+    "cpu": 1,
+    "loadBalancer": {
+      "targetPort": 9090
+    },
+    "ports": [
+      {
+        "port": 9090,
+        "external": false
+      }
+    ],
+    "readinessProbe": {
+      "httpGet": {
+        "path": "/actuator/health",
+        "port": 9090
+      },
+      "initialDelaySeconds": 120,
+      "periodSeconds": 10,
+      "timeoutSeconds": 4,
+      "failureThreshold": 3,
+      "successThreshold": 1
+    },
+    "livenessProbe": {
+      "httpGet": {
+        "path": "/actuator/health",
+        "port": 9090
+      },
+      "initialDelaySeconds": 100,
+      "periodSeconds": 10,
+      "timeoutSeconds": 4,
+      "failureThreshold": 3,
+      "successThreshold": 1
+    }
+  }
+  
+  
