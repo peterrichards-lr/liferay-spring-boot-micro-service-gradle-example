@@ -3,6 +3,10 @@ An example of how a Spring Boot Microservice can trust Liferay as an OAuth 2.0 A
 
 It is based on Fabian Bouché's [Spring Boot Resource Server](https://github.com/fabian-bouche-liferay/spring-boot-sample) example.
 
+## Maven version
+
+A Maven version can be found [here](https://github.com/peterrichards-lr/liferay-spring-boot-micro-service-maven-example) 
+
 ## Usage
 ### Liferay Experience Cloud
 This project can be added as a custom service to a Self Managed Liferay Experience Cloud (LXC SM) environnment.
@@ -10,7 +14,7 @@ This project can be added as a custom service to a Self Managed Liferay Experien
 See how the LCP.json and Dockerfile for more information on the configuration of the deployed custom service.
 
 ### Local
-It can run locally using `mvn spring-boot:run `
+It can run locally using `./gradlew bootRun`
 
 ## OAuth 2.0 Configuration
 To make this example work you need to create an entry in Liferay's OAuth 2 Adminstration configuration.
